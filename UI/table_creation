@@ -1,0 +1,27 @@
+use social_media1;
+
+create table users (
+	id integer primary key auto_increment,
+	name varchar(50),
+	profile varchar(50),
+    password varchar(50),
+	headline varchar(100),
+    token varchar(500)
+);
+
+create table posts (
+	profile varchar(50),
+    content varchar(5000),
+    likes integer,
+    shares integer
+);
+
+
+
+
+insert into users (name, profile, password, headline, token)
+values ('VK','vinay_kumar','vinay@123','Developer','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'),('Sai','sai_kumar','sai@123','Timepass','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
+
+
+insert into posts (profile, content, likes, shares)
+values ('vinay_kumar', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a arcu sit amet mi pretium consequat. Aenean malesuada accumsan lacinia. Sed malesuada, turpis in tristique egestas, risus dolor porta elit, in vehicula urna libero aliquet justo. Cras justo tortor, pulvinar sollicitudin ligula sit amet, varius efficitur leo. Phasellus imperdiet consequat rutrum.','3','5'), ('entri_telugu', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a arcu sit amet mi pretium consequat. Aenean malesuada accumsan lacinia. Sed malesuada, turpis in tristique egestas, risus dolor porta elit, in vehicula urna libero aliquet justo. Cras justo tortor, pulvinar sollicitudin ligula sit amet, varius efficitur leo. Phasellus imperdiet consequat rutrum.','5','3');
